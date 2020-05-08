@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
 const request = require("request");
-const config = require("./config.json");
+// const config = require("./config.json");
 const fs = require('fs');
 
 var bullet_position = Math.floor(Math.random() * 7) + 1;
@@ -47,4 +47,4 @@ function reload(){
     bullet_position = Math.floor(Math.random() * 7) + 1;
 }
 
-bot.login(config.token);
+bot.login(process.env.BOT_TOKEN);
