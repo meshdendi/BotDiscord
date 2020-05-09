@@ -23,7 +23,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', (msg) => {
-  const args = msg.content.split(' ');
+  const args = msg.content.trim().split(' ');
   if (!args[0].startsWith(config.prefix)) return;
   if (args.length === 1) {
     if (args[0].toLowerCase() === `${config.prefix}yomama`) {
